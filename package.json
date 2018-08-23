@@ -1,0 +1,19 @@
+{
+  "name": "williams-sonoma-challenge",
+  "version": "1.0.0",
+  "description": "product page challenge with no css frameworks and vanilla javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davedelanunez/williams-sonoma-challenge.git"
+  },
+  "author": "David Nunez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davedelanunez/williams-sonoma-challenge/issues"
+  },
+  "homepage": "https://github.com/davedelanunez/williams-sonoma-challenge#readme"
+}
