@@ -1,13 +1,15 @@
 html {
-  background-color: orange;
+  // background-color: orange;
   display: flex;
   justify-content: center;
   font-size: 16px;
   font-family: Helvetica, Arial, sans-serif;
-  // font-family: 'Ropa Sans', sans-serif;
   body {
-    background-color: pink;
+    // background-color: pink;
     margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     section.header {
       width: 100vw;
       background-color: white;
@@ -56,6 +58,93 @@ html {
           span.page-item {
             color: #323232;
           }
+        }
+      }
+    }
+    section.product {
+      width: 990px;
+      // background: teal;
+      padding: 1rem 0 2rem;
+      display: flex;
+      .product-images {
+        max-width: 540px;
+        margin: 0 1rem;
+        .main-image {
+          width: 100%;
+        }
+        .thumbnails {
+          display: flex;
+          margin: 0 3rem;
+        }
+      }
+      .product-description {
+        margin-left: 1rem;
+        // background-color: green;
+        h2 {
+          margin: 0;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 1.25rem;
+          color: #323232
+        }
+        p, ul {
+          font-family: 'Helvetica', Arial, sans-serif;
+          font-size: .8125rem;
+          line-height: 1.75;
+          color: #7a7a7a;
+          &.price {
+            font-size: 1rem;
+            color: f1f1f1;
+          }
+        }
+        .quantity {
+          margin: 1rem 0;
+        }
+        .button {
+          padding: 2rem 0;
+
+          a {
+            color: #ffffff;
+            background-color: #ea1a18;
+            padding: 1rem; 
+            text-transform: uppercase;
+            font-family: 'Ropa Sans', sans-serif;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            margin: 1rem 0;
+          }
+        }
+        .accordian {
+          border-top: 2px solid #323232;
+          border-bottom: 2px solid #323232;
+          div {
+            padding: 1rem 0;
+            text-transform: uppercase;
+            font-family: 'Times New Roman', Times, serif;
+            &:nth-of-type(2) {
+              border-top: 1px solid #323232;
+              border-bottom: 1px solid #323232;
+            }
+            p {
+              text-transform: none;
+            }
+          }
+        }
+      }
+    }
+    section.footer {
+      background-color: #f1f1f1;
+      border-top: 1px solid #323232;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+      .disclaimer {
+        display: flex;
+        justify-content: center;
+        width: 990px;
+        padding: 1rem 0;
+        p {
+          font-size: .8125rem;
         }
       }
     }

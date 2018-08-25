@@ -1,5 +1,4 @@
 html {
-  background-color: orange;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,8 +8,17 @@ html {
   font-size: 16px;
   font-family: Helvetica, Arial, sans-serif; }
   html body {
-    background-color: pink;
-    margin: 0; }
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
     html body section.header {
       width: 100vw;
       background-color: white;
@@ -70,3 +78,80 @@ html {
           margin: 0; }
           html body section.header .nav-path p span.page-item {
             color: #323232; }
+    html body section.product {
+      width: 990px;
+      padding: 1rem 0 2rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      html body section.product .product-images {
+        max-width: 540px;
+        margin: 0 1rem; }
+        html body section.product .product-images .main-image {
+          width: 100%; }
+        html body section.product .product-images .thumbnails {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          margin: 0 3rem; }
+      html body section.product .product-description {
+        margin-left: 1rem; }
+        html body section.product .product-description h2 {
+          margin: 0;
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 1.25rem;
+          color: #323232; }
+        html body section.product .product-description p, html body section.product .product-description ul {
+          font-family: 'Helvetica', Arial, sans-serif;
+          font-size: .8125rem;
+          line-height: 1.75;
+          color: #7a7a7a; }
+          html body section.product .product-description p.price, html body section.product .product-description ul.price {
+            font-size: 1rem;
+            color: f1f1f1; }
+        html body section.product .product-description .quantity {
+          margin: 1rem 0; }
+        html body section.product .product-description .button {
+          padding: 2rem 0; }
+          html body section.product .product-description .button a {
+            color: #ffffff;
+            background-color: #ea1a18;
+            padding: 1rem;
+            text-transform: uppercase;
+            font-family: 'Ropa Sans', sans-serif;
+            letter-spacing: .1rem;
+            text-decoration: none;
+            margin: 1rem 0; }
+        html body section.product .product-description .accordian {
+          border-top: 2px solid #323232;
+          border-bottom: 2px solid #323232; }
+          html body section.product .product-description .accordian div {
+            padding: 1rem 0;
+            text-transform: uppercase;
+            font-family: 'Times New Roman', Times, serif; }
+            html body section.product .product-description .accordian div:nth-of-type(2) {
+              border-top: 1px solid #323232;
+              border-bottom: 1px solid #323232; }
+            html body section.product .product-description .accordian div p {
+              text-transform: none; }
+    html body section.footer {
+      background-color: #f1f1f1;
+      border-top: 1px solid #323232;
+      width: 100vw;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      html body section.footer .disclaimer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 990px;
+        padding: 1rem 0; }
+        html body section.footer .disclaimer p {
+          font-size: .8125rem; }
