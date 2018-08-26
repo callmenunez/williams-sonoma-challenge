@@ -129,18 +129,20 @@
       <div class="button">
         <a href="#">
           Add to cart
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="0 0 5 10" style="enable-background:new 0 0 5 10;" xml:space="preserve">
-          <style type="text/css">
-            .st0{fill:#FFFFFF;}
-          </style>
-          <polygon class="st0" points="4.5,5 0,0 0,10 "/>
+          <svg class="cta" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5 10" style="enable-background:new 0 0 5 10;" xml:space="preserve"><polygon  points="4.5,5 0,0 0,10 "/>
           </svg>
         </a>
 
       </div>
       <div class="accordian-section">
-        <button class="accordion" data-text-swap="Expanded">Collapsed</button>
+        <button class="accordion arrow-right" data-text-swap="Expanded">
+          <!-- <div class="arrow-right">
+
+          </div> -->
+          <!-- <svg class="accordion-arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5 10" style="enable-background:new 0 0 5 10;" xml:space="preserve"><polygon points="5,5 0,0 0,10 "/>
+          </svg> -->
+          Collapsed
+        </button>
         <div class="panel" style="display:none;">
           <p>This section is expanded. This section can be collapsed by clicking on the "Expanded" text. This section is expanded. This section can be collapsed by clicking on the "Expanded" text.</p>
         </div>
@@ -154,18 +156,13 @@
         <div class="panel" style="display:none;">
           <p>This section is expanded. This section can be collapsed by clicking on the "Expanded" text. This section is expanded. This section can be collapsed by clicking on the "Expanded" text.</p>
         </div>
-        <!-- <div class="collapsed">
-          Collapsed
-        </div>
-        <div class="collapsed">
-          Collapsed
-        </div> -->
       </div>
     </div>
   </section>
   <section class="footer">
     <div class="disclaimer">
       <p>2018 Williams-Sonoma Inc., All Rights Reserved | <a href="https://www.williams-sonoma.com/customer-service/legal-statement.html#terms">Terms and Conditions <span class="update">(Updated March 2016)</span></a> | <a href="https://www.williams-sonoma.com/customer-service/legal-statement.html#privacy">Privacy Policy</a> | <a href="https://www.williams-sonoma.com/customer-service/legal-statement.html#legal">Legal Statement</a></p>
+      <div id="product-specs" style="color: brown; font-size: 25px"> </div>
     </div>
   </section>
   <!-- <script src="js/scripts.js"></script> -->
@@ -175,31 +172,21 @@
 
     for (i = 0; i < acc.length; i++) {
       acc[i].addEventListener("click", function() {
-        /* Toggle between adding and removing the "active" class,
-        to highlight the button that controls the panel */
+        /* Toggle between adding and removing the "active" class, to highlight the button that controls the panel */
         this.classList.toggle("active");
 
-        /* Toggle between hiding and showing the active panel */
+        /* Toggle between hiding and showing the active panel, toggle 'collapsed' text to 'expanded' */
         var panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
+        if ((panel.style.display === "block") && (this.getAttribute("data-text-swap") === this.innerHTML)) {
+          this.innerHTML = this.getAttribute("data-text-original");  
+          panel.style.display = "none";
         } else {
-            panel.style.display = "block";
+          panel.style.display = "block";
+          this.setAttribute("data-text-original", this.innerHTML);
+          this.innerHTML = this.getAttribute("data-text-swap");
         }
       });
     }
-  </script>
-  <script>
-    // Changing the collapsed text to expanded
-    var button = document.querySelectorAll("button")[0];
-    button.addEventListener('click', function() {
-      if (button.getAttribute("data-text-swap") == button.innerHTML) {
-        button.innerHTML = button.getAttribute("data-text-original");
-      } else {
-        button.setAttribute("data-text-original", button.innerHTML);
-        button.innerHTML = button.getAttribute("data-text-swap");
-      }
-    }, false);
   </script>
 </body>
 </html>

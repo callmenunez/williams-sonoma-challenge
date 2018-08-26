@@ -129,9 +129,10 @@ html {
             text-decoration: none;
             margin: 1rem 0;
             line-height: 3.0625rem;
-            svg {
+            svg.cta {
               height: 12px;
               padding-left: 4px;
+              fill: #fff;
             }
           }
         }
@@ -146,11 +147,25 @@ html {
             text-transform: uppercase;
             font-family: 'Times New Roman', Times, serif;
             font-size: 1rem;
-            transition: 1;
+            // display: flex;
+            &.arrow-right {
+              width: 0; 
+              height: 0; 
+              border-top: 12px solid transparent;
+              border-bottom: 12px solid transparent;
+              border-left: 12px solid green;
+              margin-right:20px;
+            }
+            
+            svg.accordion-arrow {
+              height: 12px;
+              fill:#585858;
+              margin-right:20px;
+            }
           }
           p {
             margin: 0;
-            padding-bottom: 1rem;
+            padding: 0 0 1rem 1rem;
             // display: none;
           }
           hr {

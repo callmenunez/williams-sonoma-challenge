@@ -138,9 +138,10 @@ html {
             text-decoration: none;
             margin: 1rem 0;
             line-height: 3.0625rem; }
-            html body section.product .product-description .button a svg {
+            html body section.product .product-description .button a svg.cta {
               height: 12px;
-              padding-left: 4px; }
+              padding-left: 4px;
+              fill: #fff; }
         html body section.product .product-description .accordian-section {
           border-top: 2px solid #323232;
           border-bottom: 2px solid #323232; }
@@ -151,12 +152,21 @@ html {
             padding: 1rem 0;
             text-transform: uppercase;
             font-family: 'Times New Roman', Times, serif;
-            font-size: 1rem;
-            -webkit-transition: 1;
-            transition: 1; }
+            font-size: 1rem; }
+            html body section.product .product-description .accordian-section button.arrow-right {
+              width: 0;
+              height: 0;
+              border-top: 12px solid transparent;
+              border-bottom: 12px solid transparent;
+              border-left: 12px solid green;
+              margin-right: 20px; }
+            html body section.product .product-description .accordian-section button svg.accordion-arrow {
+              height: 12px;
+              fill: #585858;
+              margin-right: 20px; }
           html body section.product .product-description .accordian-section p {
             margin: 0;
-            padding-bottom: 1rem; }
+            padding: 0 0 1rem 1rem; }
           html body section.product .product-description .accordian-section hr {
             margin: 0; }
     html body section.footer {
