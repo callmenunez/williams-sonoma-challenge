@@ -80,7 +80,7 @@ html {
             color: #323232; }
     html body section.product {
       width: 990px;
-      padding: 1rem 0 2rem;
+      padding: 1rem 0 4rem;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
@@ -88,12 +88,16 @@ html {
         max-width: 540px;
         margin: 0 1rem; }
         html body section.product .product-images .main-image {
-          width: 100%; }
+          width: 100%;
+          margin-bottom: 1rem; }
         html body section.product .product-images .thumbnails {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
-          margin: 0 3rem; }
+          margin: 0 3rem;
+          border: solid 2px #fff; }
+          html body section.product .product-images .thumbnails .selected {
+            border: solid 2px #323232; }
       html body section.product .product-description {
         margin-left: 1rem; }
         html body section.product .product-description h2 {
@@ -107,12 +111,23 @@ html {
           line-height: 1.75;
           color: #7a7a7a; }
           html body section.product .product-description p.price, html body section.product .product-description ul.price {
-            font-size: 1rem;
-            color: f1f1f1; }
+            font-size: 1.25rem;
+            line-height: 1rem;
+            color: #323232; }
         html body section.product .product-description .quantity {
           margin: 1rem 0; }
+          html body section.product .product-description .quantity input {
+            border: solid 1px #323232;
+            font-size: 1rem;
+            padding: .75rem 1rem;
+            max-width: 2rem;
+            margin: 0;
+            -webkit-box-shadow: inset 0px 8px 4px -5px #CCC;
+            box-shadow: inset 0px 8px 4px -5px #CCC; }
+            html body section.product .product-description .quantity input:hover {
+              z-index: 1000; }
         html body section.product .product-description .button {
-          padding: 2rem 0; }
+          padding: 0 0 1rem; }
           html body section.product .product-description .button a {
             color: #ffffff;
             background-color: #ea1a18;
@@ -121,19 +136,29 @@ html {
             font-family: 'Ropa Sans', sans-serif;
             letter-spacing: .1rem;
             text-decoration: none;
-            margin: 1rem 0; }
-        html body section.product .product-description .accordian {
+            margin: 1rem 0;
+            line-height: 3.0625rem; }
+            html body section.product .product-description .button a svg {
+              height: 12px;
+              padding-left: 4px; }
+        html body section.product .product-description .accordian-section {
           border-top: 2px solid #323232;
           border-bottom: 2px solid #323232; }
-          html body section.product .product-description .accordian div {
+          html body section.product .product-description .accordian-section button {
+            width: 100%;
+            border: none;
+            text-align: left;
             padding: 1rem 0;
             text-transform: uppercase;
-            font-family: 'Times New Roman', Times, serif; }
-            html body section.product .product-description .accordian div:nth-of-type(2) {
-              border-top: 1px solid #323232;
-              border-bottom: 1px solid #323232; }
-            html body section.product .product-description .accordian div p {
-              text-transform: none; }
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1rem;
+            -webkit-transition: 1;
+            transition: 1; }
+          html body section.product .product-description .accordian-section p {
+            margin: 0;
+            padding-bottom: 1rem; }
+          html body section.product .product-description .accordian-section hr {
+            margin: 0; }
     html body section.footer {
       background-color: #f1f1f1;
       border-top: 1px solid #323232;
@@ -154,4 +179,12 @@ html {
         width: 990px;
         padding: 1rem 0; }
         html body section.footer .disclaimer p {
-          font-size: .8125rem; }
+          font-size: .75rem;
+          color: #717171; }
+          html body section.footer .disclaimer p a {
+            color: #515151;
+            text-decoration: none; }
+            html body section.footer .disclaimer p a:hover {
+              text-decoration: underline; }
+            html body section.footer .disclaimer p a span.update {
+              color: #ea1a18; }
