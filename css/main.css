@@ -75,7 +75,8 @@ html {
         color: #959595;
         font-size: 0.6875rem; }
         html body section.header .nav-path p {
-          margin: 0; }
+          margin: 0;
+          padding: 0 1rem; }
           html body section.header .nav-path p span.page-item {
             color: #323232; }
     html body section.product {
@@ -87,17 +88,18 @@ html {
       html body section.product .product-images {
         max-width: 540px;
         margin: 0 1rem; }
-        html body section.product .product-images .main-image {
+        html body section.product .product-images #large-image {
           width: 100%;
           margin-bottom: 1rem; }
-        html body section.product .product-images .thumbnails {
+        html body section.product .product-images #thumbnails {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
-          margin: 0 3rem;
-          border: solid 2px #fff; }
-          html body section.product .product-images .thumbnails .selected {
-            border: solid 2px #323232; }
+          margin: 0 3rem; }
+          html body section.product .product-images #thumbnails img {
+            border: solid 2px #fff; }
+            html body section.product .product-images #thumbnails img:visited, html body section.product .product-images #thumbnails img:hover, html body section.product .product-images #thumbnails img:active, html body section.product .product-images #thumbnails img:focus {
+              border: solid 2px #323232; }
       html body section.product .product-description {
         margin-left: 1rem; }
         html body section.product .product-description h2 {
@@ -149,21 +151,16 @@ html {
             width: 100%;
             border: none;
             text-align: left;
-            padding: 1rem 0;
+            padding: 1rem 0 1rem 1rem;
             text-transform: uppercase;
             font-family: 'Times New Roman', Times, serif;
-            font-size: 1rem; }
-            html body section.product .product-description .accordian-section button.arrow-right {
-              width: 0;
-              height: 0;
-              border-top: 12px solid transparent;
-              border-bottom: 12px solid transparent;
-              border-left: 12px solid green;
-              margin-right: 20px; }
-            html body section.product .product-description .accordian-section button svg.accordion-arrow {
-              height: 12px;
-              fill: #585858;
-              margin-right: 20px; }
+            font-size: 1rem;
+            background-image: url("../img/arrow-collapsed.png");
+            background-repeat: no-repeat;
+            background-position: left; }
+            html body section.product .product-description .accordian-section button.active {
+              background-image: url("../img/arrow-expanded.png");
+              background-repeat: no-repeat; }
           html body section.product .product-description .accordian-section p {
             margin: 0;
             padding: 0 0 1rem 1rem; }
