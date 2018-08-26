@@ -74,22 +74,12 @@ html {
         #thumbnails {
           display: flex;
           margin: 0 3rem;
-          // .selected {
-          //   border: solid 2px #323232;
-          // }
-          // .normal {
-          //   border: solid 2px #fff;
           img {
             border: solid 2px #fff;
             &:visited, &:hover, &:active, &:focus {
               border: solid 2px #323232;
             }
           }
-          // }
-          // border: solid 2px #fff;
-          // img:active {
-          //   border: solid 2px #323232;
-          // }
         }
       }
       .product-description {
