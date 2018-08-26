@@ -96,7 +96,7 @@
         <img src="img/product-large-a.jpg">
       </div>
       <div class="thumbnails">
-        <img src="img/product-small-a.jpg">
+        <img class="selected" src="img/product-small-a.jpg">
         <img src="img/product-small-b.jpg">
         <img src="img/product-small-c.jpg">
         <img src="img/product-small-d.jpg">
@@ -104,7 +104,7 @@
     </div>
     <div class="product-description">
       <h2>Williams-Sonoma Classic Apron, French Blue</h2>
-      <p>A generously sized apron is a necessity in any kithen, and ours will brighten yours with lively color. Sewn of thick cotton, it can be personalized or mongrammed with up to nine characters, all the same height, embroidered in your choice of color. An apron of this quality makes a welcome gift for any cook.
+      <p>A generously sized apron is a necessity in any kitchen, and ours will brighten yours with lively color. Sewn of thick cotton, it can be personalized or mongrammed with up to nine characters, all the same height, embroidered in your choice of color. An apron of this quality makes a welcome gift for any cook.
         <ul>
           <li>
             Durable 100% cotton construction.
@@ -124,34 +124,82 @@
         $19.95
       </p>
       <div class="quantity">
-        1
+        <input class="quantity" id="id_form-0-quantity" min="1" name="form-0-quantity" value="1" type="number">
       </div>
       <div class="button">
         <a href="#">
           Add to cart
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 5 10" style="enable-background:new 0 0 5 10;" xml:space="preserve">
+          <style type="text/css">
+            .st0{fill:#FFFFFF;}
+          </style>
+          <polygon class="st0" points="4.5,5 0,0 0,10 "/>
+          </svg>
         </a>
+
       </div>
-      <div class="accordian">
-        <div class="expanded">
-          Expanded
-          <p>
-            This section is expanded. This section can be collapsed by clicking on the "Expanded" text. This section is expanded. This section can be collapsed by clicking on the "Expanded" text.
-          </p>
+      <div class="accordian-section">
+        <button class="accordion" data-text-swap="Expanded">Collapsed</button>
+        <div class="panel" style="display:none;">
+          <p>This section is expanded. This section can be collapsed by clicking on the "Expanded" text. This section is expanded. This section can be collapsed by clicking on the "Expanded" text.</p>
         </div>
-        <div class="collapsed">
+        <hr>
+        <button class="accordion" data-text-swap="Expanded">Collapsed</button>
+        <div class="panel" style="display:none;">
+          <p>This section is expanded. This section can be collapsed by clicking on the "Expanded" text. This section is expanded. This section can be collapsed by clicking on the "Expanded" text.</p>
+        </div>
+        <hr>
+        <button class="accordion" data-text-swap="Expanded">Collapsed</button>
+        <div class="panel" style="display:none;">
+          <p>This section is expanded. This section can be collapsed by clicking on the "Expanded" text. This section is expanded. This section can be collapsed by clicking on the "Expanded" text.</p>
+        </div>
+        <!-- <div class="collapsed">
           Collapsed
         </div>
         <div class="collapsed">
           Collapsed
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
   <section class="footer">
     <div class="disclaimer">
-      <p>2018 Williams-Sonoma Inc., All Rights Reserved | <a href="#">Terms and Conditions <span class="update">(Updated March 2018)</span></a> | <a href="#">Privacy Policy</a> | <a href="#"></a>Legal Statement</a></p>
+      <p>2018 Williams-Sonoma Inc., All Rights Reserved | <a href="https://www.williams-sonoma.com/customer-service/legal-statement.html#terms">Terms and Conditions <span class="update">(Updated March 2016)</span></a> | <a href="https://www.williams-sonoma.com/customer-service/legal-statement.html#privacy">Privacy Policy</a> | <a href="https://www.williams-sonoma.com/customer-service/legal-statement.html#legal">Legal Statement</a></p>
     </div>
   </section>
-  <script src="js/scripts.js"></script>
+  <!-- <script src="js/scripts.js"></script> -->
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+  <script>
+    // Changing the collapsed text to expanded
+    var button = document.querySelectorAll("button")[0];
+    button.addEventListener('click', function() {
+      if (button.getAttribute("data-text-swap") == button.innerHTML) {
+        button.innerHTML = button.getAttribute("data-text-original");
+      } else {
+        button.setAttribute("data-text-original", button.innerHTML);
+        button.innerHTML = button.getAttribute("data-text-swap");
+      }
+    }, false);
+  </script>
 </body>
 </html>

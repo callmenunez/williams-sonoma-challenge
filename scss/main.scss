@@ -64,17 +64,22 @@ html {
     section.product {
       width: 990px;
       // background: teal;
-      padding: 1rem 0 2rem;
+      padding: 1rem 0 4rem;
       display: flex;
       .product-images {
         max-width: 540px;
         margin: 0 1rem;
         .main-image {
           width: 100%;
+          margin-bottom: 1rem;
         }
         .thumbnails {
           display: flex;
           margin: 0 3rem;
+          border: solid 2px #fff;
+          .selected {
+            border: solid 2px #323232;
+          }
         }
       }
       .product-description {
@@ -92,16 +97,28 @@ html {
           line-height: 1.75;
           color: #7a7a7a;
           &.price {
-            font-size: 1rem;
-            color: f1f1f1;
+            font-size: 1.25rem;
+            line-height: 1rem;
+            color: #323232;
           }
         }
         .quantity {
           margin: 1rem 0;
+          input {
+            border: solid 1px #323232;
+            font-size: 1rem;
+            padding: .75rem 1rem;
+            max-width: 2rem;
+            margin: 0;
+            box-shadow: 
+              inset 0px 8px 4px -5px #CCC;
+            &:hover {
+              z-index: 1000;
+            }
+          }
         }
         .button {
-          padding: 2rem 0;
-
+          padding: 0 0 1rem;
           a {
             color: #ffffff;
             background-color: #ea1a18;
@@ -111,22 +128,33 @@ html {
             letter-spacing: .1rem;
             text-decoration: none;
             margin: 1rem 0;
+            line-height: 3.0625rem;
+            svg {
+              height: 12px;
+              padding-left: 4px;
+            }
           }
         }
-        .accordian {
+        .accordian-section {
           border-top: 2px solid #323232;
           border-bottom: 2px solid #323232;
-          div {
+          button {
+            width: 100%;
+            border: none;
+            text-align:left;
             padding: 1rem 0;
             text-transform: uppercase;
             font-family: 'Times New Roman', Times, serif;
-            &:nth-of-type(2) {
-              border-top: 1px solid #323232;
-              border-bottom: 1px solid #323232;
-            }
-            p {
-              text-transform: none;
-            }
+            font-size: 1rem;
+            transition: 1;
+          }
+          p {
+            margin: 0;
+            padding-bottom: 1rem;
+            // display: none;
+          }
+          hr {
+            margin: 0;
           }
         }
       }
@@ -137,14 +165,24 @@ html {
       width: 100vw;
       display: flex;
       justify-content: center;
-      // align-items: center;
       .disclaimer {
         display: flex;
         justify-content: center;
         width: 990px;
         padding: 1rem 0;
         p {
-          font-size: .8125rem;
+          font-size: .75rem;
+          color: #717171;
+          a {
+            color: #515151;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+            }
+            span.update {
+              color: #ea1a18;
+            }
+          }
         }
       }
     }
