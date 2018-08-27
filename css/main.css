@@ -79,6 +79,9 @@ html {
           padding: 0 1rem; }
           html body section.header .nav-path p span.page-item {
             color: #323232; }
+          html body section.header .nav-path p a {
+            text-decoration: none;
+            color: #959595; }
     html body section.product {
       width: 990px;
       padding: 1rem 0 4rem;
@@ -129,6 +132,7 @@ html {
             html body section.product .product-description .quantity input:hover {
               z-index: 1000; }
         html body section.product .product-description button#myBtn {
+          white-space: nowrap;
           border: none;
           background-color: #ea1a18;
           text-transform: uppercase;
@@ -143,9 +147,13 @@ html {
           letter-spacing: .1rem;
           text-decoration: none;
           font-size: 1rem;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
           cursor: pointer; }
           html body section.product .product-description button#myBtn svg.cta {
-            height: 12px;
+            height: 15px;
+            width: 10px;
             padding-left: 4px;
             fill: #fff; }
         html body section.product .product-description .modal {
@@ -162,11 +170,67 @@ html {
         html body section.product .product-description .modal-content {
           background-color: #fefefe;
           margin: auto;
-          padding: 2rem;
+          padding: 1rem;
           border: 1px solid #888;
-          width: 500px; }
-          html body section.product .product-description .modal-content h2 {
-            margin: 0; }
+          width: 300px;
+          max-height: 400px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column; }
+          html body section.product .product-description .modal-content div:first-of-type {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center; }
+          html body section.product .product-description .modal-content div:last-of-type {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column; }
+            html body section.product .product-description .modal-content div:last-of-type h2 {
+              margin: 0; }
+            html body section.product .product-description .modal-content div:last-of-type button#myBtn {
+              white-space: nowrap;
+              border: none;
+              background-color: #ea1a18;
+              text-transform: uppercase;
+              font-family: 'Ropa Sans', sans-serif;
+              letter-spacing: .1rem;
+              text-decoration: none;
+              margin: 1rem 0;
+              padding: 0;
+              color: #ffffff;
+              padding: 1rem;
+              text-transform: uppercase;
+              letter-spacing: .1rem;
+              text-decoration: none;
+              font-size: 1rem;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              cursor: pointer; }
+              html body section.product .product-description .modal-content div:last-of-type button#myBtn svg.cta {
+                height: 15px;
+                padding-left: 4px;
+                fill: #fff; }
+            html body section.product .product-description .modal-content div:last-of-type a {
+              font-size: .875rem;
+              color: #7a7a7a; }
         html body section.product .product-description .close {
           color: #aaaaaa;
           float: right;
@@ -179,6 +243,7 @@ html {
           border-top: 2px solid #323232;
           border-bottom: 2px solid #323232; }
           html body section.product .product-description .accordian-section button {
+            background-color: #ffffff;
             width: 100%;
             border: none;
             text-align: left;
@@ -186,12 +251,12 @@ html {
             text-transform: uppercase;
             font-family: 'Times New Roman', Times, serif;
             font-size: 1rem;
-            background-image: url("../img/arrow-collapsed.svg");
+            background-image: url("https://davedelanunez.github.io/williams-sonoma-challenge/img/arrow-collapsed.svg");
             background-size: 12px 12px;
             background-repeat: no-repeat;
             background-position: left; }
             html body section.product .product-description .accordian-section button.active {
-              background-image: url("../img/arrow-expanded.png");
+              background-image: url("https://davedelanunez.github.io/williams-sonoma-challenge/img/arrow-expanded.svg");
               background-repeat: no-repeat;
               background-size: 12px 12px; }
           html body section.product .product-description .accordian-section p {
