@@ -74,22 +74,12 @@ html {
         #thumbnails {
           display: flex;
           margin: 0 3rem;
-          // .selected {
-          //   border: solid 2px #323232;
-          // }
-          // .normal {
-          //   border: solid 2px #fff;
           img {
             border: solid 2px #fff;
             &:visited, &:hover, &:active, &:focus {
               border: solid 2px #323232;
             }
           }
-          // }
-          // border: solid 2px #fff;
-          // img:active {
-          //   border: solid 2px #323232;
-          // }
         }
       }
       .product-description {
@@ -126,24 +116,59 @@ html {
             }
           }
         }
-        .button {
-          padding: 0 0 1rem;
-          a {
-            color: #ffffff;
-            background-color: #ea1a18;
-            padding: 1rem; 
-            text-transform: uppercase;
-            font-family: 'Ropa Sans', sans-serif;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            margin: 1rem 0;
-            line-height: 3.0625rem;
-            svg.cta {
-              height: 12px;
-              padding-left: 4px;
-              fill: #fff;
-            }
+        button#myBtn {
+          border: none;
+          background-color: #ea1a18;
+          text-transform: uppercase;
+          font-family: 'Ropa Sans', sans-serif;
+          letter-spacing: .1rem;
+          text-decoration: none;
+          margin: 1rem 0;
+          padding: 0;
+          color: #ffffff;
+          padding: 1rem; 
+          text-transform: uppercase;
+          letter-spacing: .1rem;
+          text-decoration: none;
+          font-size: 1rem;
+          cursor: pointer;
+          svg.cta {
+            height: 12px;
+            padding-left: 4px;
+            fill: #fff;
           }
+        }
+        .modal {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto; 
+          background-color: rgb(0,0,0);
+          background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+          background-color: #fefefe;
+          margin: auto;
+          padding: 2rem;
+          border: 1px solid #888;
+          width: 500px;
+          h2 {
+            margin: 0;
+          }
+        }
+        .close {
+          color: #aaaaaa;
+          float: right;
+          font-size: 28px;
+        }
+        .close:hover, .close:focus {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
         }
         .accordian-section {
           border-top: 2px solid #323232;
@@ -152,16 +177,18 @@ html {
             width: 100%;
             border: none;
             text-align:left;
-            padding: 1rem 0 1rem 1rem;
+            padding: 1rem 0 1rem 1.1rem;
             text-transform: uppercase;
             font-family: 'Times New Roman', Times, serif;
             font-size: 1rem;
-            background-image: url('../img/arrow-collapsed.png');
+            background-image: url('../img/arrow-collapsed.svg');
+            background-size: 12px 12px;
             background-repeat: no-repeat;
             background-position: left;
             &.active {
               background-image: url('../img/arrow-expanded.png');
               background-repeat: no-repeat;
+              background-size: 12px 12px;
             }
           }
           p {
