@@ -57,6 +57,10 @@ html {
           span.page-item {
             color: #323232;
           }
+          a {
+            text-decoration: none;
+            color: #959595;
+          }
         }
       }
     }
@@ -117,6 +121,7 @@ html {
           }
         }
         button#myBtn {
+          white-space: nowrap;
           border: none;
           background-color: #ea1a18;
           text-transform: uppercase;
@@ -131,9 +136,11 @@ html {
           letter-spacing: .1rem;
           text-decoration: none;
           font-size: 1rem;
+          display: flex;
           cursor: pointer;
           svg.cta {
-            height: 12px;
+            height: 15px;
+            width:10px;
             padding-left: 4px;
             fill: #fff;
           }
@@ -153,11 +160,52 @@ html {
         .modal-content {
           background-color: #fefefe;
           margin: auto;
-          padding: 2rem;
+          padding: 1rem;
           border: 1px solid #888;
-          width: 500px;
-          h2 {
-            margin: 0;
+          width: 300px;
+          max-height: 400px;
+          display: flex;
+          flex-direction: column;
+          div:first-of-type {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          div:last-of-type {
+            display: flex;
+            flex-direction: column;
+            h2 {
+              margin: 0;
+            }
+            button#myBtn {
+              white-space: nowrap;
+              border: none;
+              background-color: #ea1a18;
+              text-transform: uppercase;
+              font-family: 'Ropa Sans', sans-serif;
+              letter-spacing: .1rem;
+              text-decoration: none;
+              margin: 1rem 0;
+              padding: 0;
+              color: #ffffff;
+              padding: 1rem; 
+              text-transform: uppercase;
+              letter-spacing: .1rem;
+              text-decoration: none;
+              font-size: 1rem;
+              display: flex;
+              justify-content: center;
+              cursor: pointer;
+              svg.cta {
+                height: 15px;
+                padding-left: 4px;
+                fill: #fff;
+              }
+            }
+            a {
+              font-size: .875rem;
+              color: #7a7a7a;
+            }
           }
         }
         .close {
@@ -174,6 +222,7 @@ html {
           border-top: 2px solid #323232;
           border-bottom: 2px solid #323232;
           button {
+            background-color: #ffffff;
             width: 100%;
             border: none;
             text-align:left;
@@ -181,12 +230,12 @@ html {
             text-transform: uppercase;
             font-family: 'Times New Roman', Times, serif;
             font-size: 1rem;
-            background-image: url('../img/arrow-collapsed.svg');
+            background-image: url('https://davedelanunez.github.io/williams-sonoma-challenge/img/arrow-collapsed.svg');
             background-size: 12px 12px;
             background-repeat: no-repeat;
             background-position: left;
             &.active {
-              background-image: url('../img/arrow-expanded.png');
+              background-image: url('https://davedelanunez.github.io/williams-sonoma-challenge/img/arrow-expanded.svg');
               background-repeat: no-repeat;
               background-size: 12px 12px;
             }
